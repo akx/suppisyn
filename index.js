@@ -24,7 +24,7 @@ const analyser = new Tone.Analyser('fft', 128);
 const highpass = new Tone.Filter(3500, 'highpass');
 reverb.chain(highpass, analyser);
 
-const samplers = samples.map((url) => new Tone.Sampler(url).toMaster()});
+const samplers = samples.map((url) => new Tone.Sampler(url).toMaster());
 
 function fire() {
   const index = Math.floor(Math.random() * samplers.length);
